@@ -312,7 +312,6 @@ const Page = () => {
             alt="profile-picture"
             className="h-32 w-32 rounded-full object-cover bg-slate-200 p-1 shadow-lg border border-slate-500"
             width={32} height={32}
-            layout="responsive"
           />
         )}
         <h1 className="font-bold text-xl uppercase text-center">

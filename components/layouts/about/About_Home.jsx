@@ -105,7 +105,7 @@ export const About_Home = () => {
             <div className="bg-white shadow-lg rounded-lg">
               <Slider {...settings}>
                 {images.map((src, index) => (
-                  <div key={index} className="h-80">
+                  <div key={index} className="h-84">
                     <Image
                       src={src || ""}
                       alt={`Slide ${index}`}

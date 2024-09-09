@@ -25,7 +25,7 @@ function Hero() {
 
   useEffect(() => {
     fetchMsgFromVC();
-    fetchMsgFromProVC();
+    // fetchMsgFromProVC();
     fetchImages();
   }, []);
 
@@ -74,7 +74,7 @@ function Hero() {
   };
 
   return (
-    <div className="w-full md:flex md:p-6 md:space-x-6 mt-8 mx-auto clear-both">
+    <div className="w-full md:flex md:p-6 md:space-x-6 mt-8 mx-auto clear-both justify-center">
       {/* Left Section */}
       {/* <div className="w-full md:w-2/4">
           <div className="bg-white shadow-lg rounded-lg">
@@ -94,7 +94,7 @@ function Hero() {
         </div> */}
 
       {/* Message From VC */}
-      <div className="bg-white md:w-1/3 shadow-lg rounded-lg p-4 border border-gray-200 ">
+      <div className="bg-white md:w-1/2 justify-center shadow-lg rounded-lg p-4 border border-gray-200 ">
         <div className="border-b-2 border-green-500 pb-2 mb-4">
           <h2 className="text-lg font-semibold text-green-500">
             Message From VC
@@ -108,16 +108,16 @@ function Hero() {
                 : "https://sstu.ac.bd/wp-content/uploads/2024/01/1674212931820-240x300.jpg"
             }
             alt="VC"
-            className="w-45 h-24 float-left px-2 hover:scale-110 transition-all duration-200"
+            className="w-45 h-24 float-left px-4 hover:scale-110 transition-all duration-200"
             width={24}
             height={24}
             layout="responsive"
           />
           <p className="text-justify">
-            {msgFromVc.content?.length > 1000
-              ? msgFromVc.content.substring(0, 1000) + "..."
+            {msgFromVc.content?.length > 1250
+              ? msgFromVc.content.substring(0, 1250) + "..."
               : msgFromVc.content}
-            {msgFromVc.content?.length > 1000 && (
+            {msgFromVc.content?.length > 1250 && (
               <a href="/message-from-vc" className="text-blue-500 ml-1">
                 Read more
               </a>
@@ -127,7 +127,7 @@ function Hero() {
       </div>
 
       {/* Message From Pro-VC */}
-      <div className="bg-white md:w-1/3 shadow-lg md:h-auto rounded-lg p-4 border border-gray-200 ">
+      {/* <div className="bg-white md:w-1/3 shadow-lg md:h-auto rounded-lg p-4 border border-gray-200 ">
         <div className="border-b-2 border-green-500 pb-2 mb-4">
           <h2 className="text-lg font-semibold text-green-500">
             Message From Pro VC
@@ -157,7 +157,7 @@ function Hero() {
             )}
           </p>
         </div>
-      </div>
+      </div> */}
       <LatestNotice />
       <style jsx global>
         {`

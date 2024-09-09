@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const ChairmanMsg = ({ showfull, path }) => {
   const [chairmanMsg, setChairmanMsg] = useState("");
-  const { api } = useDept();
+  const { api , deptId} = useDept();
 
   useEffect(() => {
     if (api) {
@@ -47,7 +47,7 @@ const ChairmanMsg = ({ showfull, path }) => {
             </p>
           )}
           {!showfull && (
-            <Link href="/cse/about/message/chairman">
+            <Link href={`/${deptId}/about/message/chairman`}>
               <div className="bg-gradient-to-tr from-green-500 to-green-900 text-white py-3 px-4 rounded-md mt-2 inline-block cursor-pointer hover:bg-gradient-to-t hover:from-green-700 hover:to-green-900 transition-all duration-500">
                 Read More
               </div>
