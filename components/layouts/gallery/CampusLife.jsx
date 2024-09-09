@@ -175,7 +175,7 @@ const CampusLife = () => {
           {images.map((image) => (
             <div
               key={image.id}
-              className="relative h-48 mx-5 cursor-pointer"
+              className="relative md:h-48 mx-5 cursor-pointer"
               onClick={() => openModal(image.image, image.title)}
             >
               <Image
