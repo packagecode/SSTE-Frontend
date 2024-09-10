@@ -8,7 +8,9 @@ import Image from "next/image";
 
 const Navbar = () => {
   const { deptName } = useDept();
-
+  useEffect(() => {
+   if(deptName) document.title = `Department of ${deptName} - Sunamgonj Science and Technology University`;
+  }, [deptName]);
   return (
     <>
       <div className="bg-white py-6 border-b-2 border-b-green-500 flex flex-col md:flex-row items-center px-4 md:px-20">
