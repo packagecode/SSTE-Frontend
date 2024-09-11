@@ -54,47 +54,62 @@ function MainSilder() {
   return (
     <>
       <div className="relative w-full md:h-screen max-h-[800px] overflow-hidden flex flex-col items-center h-80">
-        {slideData.map((slide, index) => (
-          // <a href={slide.button_link}>
-          <div
-            key={index}
-            className={`absolute top-0 left-0 w-full h-full transition-all duration-1000 ${
-              index === currentSlide ? "" : "hidden"
-            }`}
-          >
-            <div
-              className="w-full h-full bg-center bg-cover"
-              style={{ backgroundImage: `url(${slide.image})` }}
+        {slideData.length == 0 ? (
+          <div role="status" className="animate-pulse ">
+            <svg
+              className="w-full h-screen text-gray-200 dark:text-gray-600"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 18"
             >
-              <div className="flex flex-col items-center justify-start w-full h-full bg-gray-900 bg-opacity-70 py-12 px-10">
-                <div className="flex items-center h-full">
-                  <div className="flex flex-col gap-y-2">
-                    <div className="text-gray-300 h-48 animate__animated animate__fadeInRight">
-                      <p className="md:text-4xl text-1xl mb-2 text-gray-300 font-bold">
-                        {slide.title}
-                      </p>
-                      <p className="hidden md:block text-4xl mb-4 text-gray-300 font-bold">
-                        {slide.subtitle}
-                      </p>
-                      <p className="hidden md:block text-gray-300 mb-4">
-                        {slide.content}
-                      </p>
-                      <div className="py-4">
-                        <a
-                          href={slide.button_link}
-                          className="bg-green-500 text-white px-4 md:py-2 rounded-lg mt-4"
-                        >
-                          {slide.button_text}
-                        </a>
+              <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
+            </svg>
+            <span className="sr-only">Loading...</span>
+          </div>
+        ) : (
+          slideData.map((slide, index) => (
+            // <a href={slide.button_link}>
+            <div
+              key={index}
+              className={`absolute top-0 left-0 w-full h-full transition-all duration-1000 ${
+                index === currentSlide ? "" : "hidden"
+              }`}
+            >
+              <div
+                className="w-full h-full bg-center bg-cover"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              >
+                <div className="flex flex-col items-center justify-start w-full h-full bg-gray-900 bg-opacity-70 py-12 px-10">
+                  <div className="flex items-center h-full">
+                    <div className="flex flex-col gap-y-2">
+                      <div className="text-gray-300 h-48 animate__animated animate__fadeInRight">
+                        <p className="md:text-4xl text-1xl mb-2 text-gray-300 font-bold">
+                          {slide.title}
+                        </p>
+                        <p className="hidden md:block text-4xl mb-4 text-gray-300 font-bold">
+                          {slide.subtitle}
+                        </p>
+                        <p className="hidden md:block text-gray-300 mb-4">
+                          {slide.content}
+                        </p>
+                        <div className="py-4">
+                          <Link
+                            href={slide.button_link}
+                            className="bg-green-500 text-white px-4 md:py-2 rounded-lg mt-4"
+                          >
+                            {slide.button_text}
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          // </a>
-        ))}
+            // </a>
+          ))
+        )}
         <div className="text-xl absolute md:bottom-20 w-full max-w-7xl">
           <div className="relative overflow-hidden whitespace-nowrap bg-black bg-opacity-50 py-2 w-full text-white md:rounded-xl">
             <div className="animate-marquee inline-block">

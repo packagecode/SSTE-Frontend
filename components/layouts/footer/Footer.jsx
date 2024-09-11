@@ -9,6 +9,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   const [footerData, setFooterData] = useState({
@@ -102,12 +103,12 @@ const Footer = () => {
               {footerData.academics.map((el, idx) => (
                 <ul key={idx} className=" text-gray-200">
                   <li>
-                    <a
+                    <Link
                       href={el.href}
                       className="hover:text-green-400 duration-150"
                     >
                       {el.name}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               ))}
@@ -118,12 +119,12 @@ const Footer = () => {
               {footerData.clubs.map((el, idx) => (
                 <ul key={idx} className=" text-gray-200">
                   <li>
-                    <a
+                    <Link
                       href={el.href}
                       className="hover:text-green-400 duration-150"
                     >
                       {el.name}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               ))}
@@ -134,12 +135,12 @@ const Footer = () => {
               {footerData.services.map((el, idx) => (
                 <ul key={idx} className=" text-gray-200">
                   <li>
-                    <a
+                    <Link
                       href={el.href}
                       className="hover:text-green-400 duration-150"
                     >
                       {el.name}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               ))}
@@ -150,12 +151,12 @@ const Footer = () => {
               {footerData.admissions.map((el, idx) => (
                 <ul key={idx} className=" text-gray-200">
                   <li>
-                    <a
+                    <Link
                       href={el.href}
                       className="hover:text-green-400 duration-150"
                     >
                       {el.name}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               ))}
@@ -166,12 +167,12 @@ const Footer = () => {
               {footerData.research.map((el, idx) => (
                 <ul key={idx} className=" text-gray-200">
                   <li>
-                    <a
+                    <Link
                       href={el.href}
                       className="hover:text-green-400 duration-150"
                     >
                       {el.name}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               ))}
@@ -183,12 +184,12 @@ const Footer = () => {
               {footerData.importantLinks.map((el, idx) => (
                 <ul key={idx} className=" text-gray-200">
                   <li>
-                    <a
+                    <Link
                       href={el.href}
                       className="hover:text-green-400 duration-150"
                     >
                       {el.name}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               ))}
@@ -214,12 +215,12 @@ const Footer = () => {
                 <h4 className="text-white font-semibold">Web Services</h4>
                 {footerData.webServices.map((el, idx) => (
                   <li key={idx}>
-                    <a
+                    <Link
                       href={el.href}
                       className="hover:text-green-400 duration-150"
                     >
                       {el.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -228,12 +229,12 @@ const Footer = () => {
                 <h4 className="text-white font-semibold">Campus Life</h4>
                 {footerData.campusLife.map((el, idx) => (
                   <li key={idx}>
-                    <a
+                    <Link
                       href={el.href}
                       className="hover:text-green-400 duration-150 cursor-pointer"
                     >
                       {el.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -277,13 +278,13 @@ const Footer = () => {
             reserved.
           </p>
           <div className="flex items-center gap-x-6 text-gray-400 mt-6 sm:mt-0">
-            <a href={footerData.contact.facebook_link}>
+            <a href={footerData.contact.facebook_link} target="_blank">
               <FaFacebook className="w-6 h-6 hover:text-gray-500 duration-150" />
             </a>
-            <a href={footerData.contact.twitter_link}>
+            <a href={footerData.contact.twitter_link} target="_blank">
               <FaTwitter className="w-6 h-6 hover:text-gray-500 duration-150" />
             </a>
-            <a href={footerData.contact.youtube_link}>
+            <a href={footerData.contact.youtube_link} target="_blank">
               <FaYoutube className="w-6 h-6 hover:text-gray-500 duration-150" />
             </a>
           </div>

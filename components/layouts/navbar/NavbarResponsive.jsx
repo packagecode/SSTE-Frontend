@@ -45,7 +45,7 @@ const NavbarResponsive = () => {
     <>
       <header className="bg-green-600">
         <div className="container mx-auto md:flex items-center justify-center py-4 px-6">
-          <div className="flex items-center">
+          <div className="md:flex items-center">
             <Image
               src="/logo.png"
               alt="SSTU Logo"
@@ -82,23 +82,23 @@ const NavbarResponsive = () => {
               </div> */}
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <a
+                  <Link
                     href="/"
                     className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Home
-                  </a>
+                  </Link>
                   <div
                     className="relative"
                     onMouseEnter={() => handleMouseEnter("about")}
                     onMouseLeave={() => handleMouseLeave("about")}
                   >
-                    <a
+                    <Link
                       href="#"
                       className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 rounded-md text-sm font-medium"
                     >
                       About SSTU
-                    </a>
+                    </Link>
                     {isOpenMenu.about && (
                       <ul className="origin-top-right absolute top-full left-1/2 -translate-x-1/2 min-w-[240px] bg-white text-gray-900 border border-slate-200 p-2 rounded-lg shadow-xl [x-cloak]:hidden z-[999999]">
                         <li>
@@ -196,12 +196,12 @@ const NavbarResponsive = () => {
                     onMouseEnter={() => handleMouseEnter("administration")}
                     onMouseLeave={() => handleMouseLeave("administration")}
                   >
-                    <a
+                    <Link
                       href="#"
                       className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Administration
-                    </a>
+                    </Link>
                     {isOpenMenu.administration && (
                       <ul className="origin-top-left absolute top-full left-0 -translate-x-1/2 min-w-max bg-white text-gray-900 border border-slate-200 p-2 rounded-lg shadow-xl [x-cloak]:hidden z-[99999]">
                         <div className="flex gap-x-3 p-4">
@@ -405,12 +405,12 @@ const NavbarResponsive = () => {
                     onMouseEnter={() => handleMouseEnter("academics")}
                     onMouseLeave={() => handleMouseLeave("academics")}
                   >
-                    <a
+                    <Link
                       href="#"
                       className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Academics
-                    </a>
+                    </Link>
                     {isOpenMenu.academics && (
                       <ul className="origin-top-left absolute top-full left-0 -translate-x-1/2 min-w-max bg-white text-gray-900 border border-slate-200 p-2 rounded-lg shadow-xl [x-cloak]:hidden z-[999999]">
                         <div className="flex flex-col gap-y-3 p-4">
@@ -501,12 +501,12 @@ const NavbarResponsive = () => {
                     onMouseEnter={() => handleMouseEnter("admission")}
                     onMouseLeave={() => handleMouseLeave("admission")}
                   >
-                    <a
+                    <Link
                       href="#"
                       className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Admission
-                    </a>
+                    </Link>
                     {isOpenMenu.admission && (
                       <ul className="origin-top-left absolute top-full left-0 -translate-x-1/2 min-w-max bg-white text-gray-900 border border-slate-200 p-2 rounded-lg shadow-xl [x-cloak]:hidden z-[99999]">
                         <div className="flex flex-col gap-y-3 p-4">
@@ -564,30 +564,30 @@ const NavbarResponsive = () => {
                       </ul>
                     )}
                   </div>
-                  <a
+                  <Link
                     href="/research-extension"
                     className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Research
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/notice/all/"
                     className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Notices
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/career"
                     className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Careers
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/contact-us"
                     className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -634,13 +634,13 @@ const NavbarResponsive = () => {
         </div>
         <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a
+            <Link
               href="/"
               className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
               onClick={() =>
@@ -655,59 +655,59 @@ const NavbarResponsive = () => {
                 <CgChevronRight className="float-end mt-1" />
               )}
               {isOpenMenu.about && <CgChevronDown className="float-end mt-1" />}
-            </a>
+            </Link>
             {isOpenMenu.about && (
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a
+                <Link
                   href="/about-us/at-a-glance/"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> At a
                   glance
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/about-us/act-of-the-university/"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> SSTU ACT
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/about-us/organogram/"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> SSTU
                   Organogram
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/about-us/bulletin/"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> SSTU
                   Bulletin
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/about-us/monogram/"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> SSTU
                   Monogram
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/about-us/campus-map/"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> Campus
                   Map
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/about-us/gallery/"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> Gallery
-                </a>
+                </Link>
               </div>
             )}
-            <a
+            <Link
               href="#"
               className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
               onClick={() =>
@@ -724,111 +724,111 @@ const NavbarResponsive = () => {
               {isOpenMenu.administration && (
                 <CgChevronDown className="float-end mt-1" />
               )}
-            </a>
+            </Link>
             {isOpenMenu.administration && (
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <div className="text-center text-white">Statutory Office</div>
-                <a
+                <Link
                   href="/office-of-vice-chancellor"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> Vice
                   Chancellor&#39;s Office
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/office-of-registrar"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" />{" "}
                   Registrar&#39;s Office
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/librarian-ofc"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" />{" "}
                   Librarian&#39;s Office
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/controllers-ofc"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" />{" "}
                   Controller&#39;s Office
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/exam-controller-ofc"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> Exam
                   Controller&#39;s Office
-                </a>
+                </Link>
                 <div className="text-center text-white">Authority</div>
-                <a
+                <Link
                   href="/syndicatelist"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" />{" "}
                   Syndicate
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/academic-council"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> Academic
                   Council
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/finance-committee"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> Finance
                   Committee
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/plan-develop-com"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> Planning
                   and Development Committee
-                </a>
+                </Link>
                 <div className="text-center text-white">
                   Office of the Deans
                 </div>
-                <a
+                <Link
                   href="/department/science"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> Faculty
                   of Science
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/department/compscienceeng"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> Faculty
                   of Engineering & Technology
-                </a>
+                </Link>
                 <div className="text-center text-white">
                   Office of the Directors
                 </div>
-                <a
+                <Link
                   href="/students-welfare"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" />{" "}
                   Students&#39; Welfare
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/research-extension"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> Research
                   & Extension
-                </a>
+                </Link>
               </div>
             )}
-            <a
+            <Link
               href="#"
               className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
               onClick={() =>
@@ -845,44 +845,44 @@ const NavbarResponsive = () => {
               {isOpenMenu.academics && (
                 <CgChevronDown className="float-end mt-1" />
               )}
-            </a>
+            </Link>
             {isOpenMenu.academics && (
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <div className="text-center text-white">Faculty of Science</div>
-                <a
+                <Link
                   href="/math"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" />{" "}
                   Department of Mathematics
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/phy"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" />{" "}
                   Department of Physics
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/chem"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" />{" "}
                   Department of Chemistry
-                </a>
+                </Link>
                 <div className="text-center text-white">
                   Faculty of Engineering and Technology
                 </div>
-                <a
+                <Link
                   href="/cse/"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" />{" "}
                   Department of Computer Science & Engineering
-                </a>
+                </Link>
               </div>
             )}
-            <a
+            <Link
               href="#"
               className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
               onClick={() =>
@@ -899,60 +899,60 @@ const NavbarResponsive = () => {
               {isOpenMenu.admission && (
                 <CgChevronDown className="float-end mt-1" />
               )}
-            </a>
+            </Link>
             {isOpenMenu.admission && (
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <div className="text-center text-white">Undergraduate</div>
-                <a
+                <Link
                   href="/admission-test"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" />{" "}
                   Admission Test
-                </a>
+                </Link>
                 <div className="text-center text-white">
                   International Students
                 </div>
-                <a
+                <Link
                   href="/entry-requirement"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> Entry
                   Requirements
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/how-to-apply"
                   className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
                 >
                   <CgChevronDoubleRight className="float-start mt-1" /> How to
                   Apply
-                </a>
+                </Link>
               </div>
             )}
-            <a
+            <Link
               href="/research-extension"
               className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
             >
               Research
-            </a>
-            <a
+            </Link>
+            <Link
               href="/notice/all/"
               className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
             >
               Notices
-            </a>
-            <a
+            </Link>
+            <Link
               href="/career"
               className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
             >
               Careers
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contact-us"
               className="text-white hover:text-gray-300 hover:bg-green-800 px-3 py-2 block rounded-md text-sm font-medium"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

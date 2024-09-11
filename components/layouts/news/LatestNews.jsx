@@ -176,7 +176,7 @@ const LatestNews = () => {
             className="md:flex relative grid md:h-[20rem] md:w-1/4 items-end justify-center overflow-hidden text-center mb-4"
           >
             <Image
-              src={`${API_URL}${featuredNews.image || ""}`}
+              src={featuredNews.image ? `${API_URL}${featuredNews.image}` : "/placeholder.png"}
               alt="news"
               className="w-full md:h-[20rem] object-cover hover:scale-110 transition-all duration-200 hover:cursor-pointer"
               width={100}

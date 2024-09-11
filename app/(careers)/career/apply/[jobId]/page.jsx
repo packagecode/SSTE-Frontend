@@ -3,6 +3,7 @@ import React from "react";
 import { useParams } from "next/navigation";
 import { API_URL } from "@/app/apiurl";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const Applypage = () => {
   const { jobId } = useParams();
@@ -22,7 +23,7 @@ const Applypage = () => {
       const res = await fetch(`${API_URL}/api/career/jobs/${jobId}`);
       const data = await res.json();
       setJob(data);
-      console.log(data);
+      // console.log(data);
     };
     fetchJob();
   }, [jobId]);
@@ -40,7 +41,7 @@ const Applypage = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
 
     const form = new FormData();
     form.append("job", jobId);
@@ -197,12 +198,12 @@ const Applypage = () => {
           >
             Apply
           </button>
-          <a
+          <Link
             className="bg-green-500 text-white px-4 py-2 rounded-md mt-2 ml-2"
             href={job.pdf ? job.pdf : `/`}
           >
             Download PDF
-          </a>
+          </Link>
         </div>
       </div>
     </div>

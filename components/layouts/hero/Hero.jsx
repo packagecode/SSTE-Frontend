@@ -7,20 +7,29 @@ import "slick-carousel/slick/slick-theme.css";
 import LatestNotice from "../notice/LatestNotice";
 import { API_URL } from "@/app/apiurl";
 import Image from "next/image";
+import Link from "next/link";
 
 function Hero() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2500,
-  };
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 1000,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 2500,
+  // };
 
-  const [msgFromVc, setMsgFromVc] = useState([]);
-  const [msgFromProVc, setMsgFromProVc] = useState([]);
+  const tempContent = 'Welcome to Sunamgonj Science and Technology University Website.  This website of SSTU aims at providing the user with th...  This website of SSTU aims at providing the user with th... This website of SSTU aims at providing the user with th... Sunamgonj Science and Technology University (SSTU), Sunamganj is a renowned university with the mark of its magnificent progress. Various kinds of activities, academic and extra-curriculum, have brought this university to both national and international focus. Both teachers and students spontaneously participate in different programs to make the university a centre for excellence. Research activities have earned fame of the university at both home and aboard. We are contented and committed to take the university forward with the help of the teachers, students,officers and employees who have been toiling hard to retain peace and order in the campus. We strongly adhere to all forms of progressive ideas as we bear the spirit of freedom, conscience and liberal thought. The university established in 2020 currently has 4 departments and enhancement of research capabilities. This website of SSTU aims at providing the user with the latest information related to what we stand for, what we offer and how we operate our academic and research arena.';
+  
+  const [msgFromVc, setMsgFromVc] = useState({
+    content: tempContent,
+    image: "/placeholder.png",
+  });
+  const [msgFromProVc, setMsgFromProVc] = useState({
+    content: tempContent,
+    image: "/placeholder.png",
+  });
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -49,11 +58,7 @@ function Hero() {
         throw new Error(`API request failed with status ${response.status}`);
       }
       const data = await response.json();
-      let MsgFromProVc = data[0];
-      MsgFromProVc.content = 'Welcome to Sunamgonj Science and Technology University Website.  This website of SSTU aims at providing the user with th...  This website of SSTU aims at providing the user with th... This website of SSTU aims at providing the user with th... Sunamgonj Science and Technology University (SSTU), Sunamganj is a renowned university with the mark of its magnificent progress. Various kinds of activities, academic and extra-curriculum, have brought this university to both national and international focus. Both teachers and students spontaneously participate in different programs to make the university a centre for excellence. Research activities have earned fame of the university at both home and aboard. We are contented and committed to take the university forward with the help of the teachers, students,officers and employees who have been toiling hard to retain peace and order in the campus. We strongly adhere to all forms of progressive ideas as we bear the spirit of freedom, conscience and liberal thought. The university established in 2020 currently has 4 departments and enhancement of research capabilities. This website of SSTU aims at providing the user with the latest information related to what we stand for, what we offer and how we operate our academic and research arena.';
-      // setMsgFromProVc(data[0]);
-      // console.log(MsgFromProVc);
-      setMsgFromProVc(MsgFromProVc);
+      setMsgFromProVc(data[0]);
     } catch (error) {
       console.error("Error fetching message from Pro-VC:", error);
     }
@@ -118,9 +123,9 @@ function Hero() {
               ? msgFromVc.content.substring(0, 1250) + "..."
               : msgFromVc.content}
             {msgFromVc.content?.length > 1250 && (
-              <a href="/message-from-vc" className="text-blue-500 ml-1">
+              <Link href="/message-from-vc" className="text-blue-500 ml-1">
                 Read more
-              </a>
+              </Link>
             )}
           </p>
         </div>

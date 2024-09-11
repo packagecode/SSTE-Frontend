@@ -94,7 +94,7 @@ const Sidebar = () => {
             <FiX size={24} />
           </button>
         </div>
-        <a href={`/${deptName}`}>
+        <Link href={`/${deptName}`}>
           <div
             className={`hover:bg-gray-200 py-[8px] cursor-pointer rounded-xl px-5 transition-all duration-500 ${
               pathname === "/" + deptName &&
@@ -105,7 +105,7 @@ const Sidebar = () => {
               <FiHome /> Home
             </p>
           </div>
-        </a>
+        </Link>
         {generateLink(
           "#",
           "About",

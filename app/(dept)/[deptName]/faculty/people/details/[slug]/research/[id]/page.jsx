@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { API_URL } from "@/app/apiurl";
 import { FiCalendar, FiUsers, FiLink } from "react-icons/fi";
 import Image from "next/image";
+import Link from "next/link";
 
 const Page = () => {
     const { id } = useParams();
@@ -41,9 +42,9 @@ const Page = () => {
                 <FiLink />
                 <p>
                     DOI:{" "}
-                    <a href={researchData.doi} target="_blank">
+                    <Link href={researchData.doi} target="_blank">
                         {researchData.doi}
-                    </a>
+                    </Link>
                 </p>
             </div>
             <div className="text-justify text-md mt-5">

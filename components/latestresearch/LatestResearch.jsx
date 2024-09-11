@@ -46,7 +46,7 @@ const LatestResearch = ({ viewall }) => {
               className=" bg-white shadow-lg border rounded-md duration-300 hover:shadow-sm"
               key={items.id}
             >
-              <a href={`/research-extension/view/${items.id}`}>
+              <Link href={`/research-extension/view/${items.id}`}>
                 <div className="relative">
                   <Image
                     src={items.thumbnail || ""}
@@ -78,7 +78,7 @@ const LatestResearch = ({ viewall }) => {
                   <h3 className="text-xl text-gray-900">{items.title}</h3>
                   <p className="text-gray-400 text-sm mt-1">{items.desc}</p>
                 </div>
-              </a>
+              </Link>
             </article>
           ))}
         </div>

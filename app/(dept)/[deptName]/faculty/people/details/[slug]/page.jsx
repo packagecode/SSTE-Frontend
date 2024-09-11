@@ -15,6 +15,7 @@ import { FaTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
 
 const Page = () => {
   const { slug } = useParams();
@@ -261,7 +262,7 @@ const Page = () => {
                   className=" bg-white shadow-lg border rounded-md duration-300 hover:shadow-sm"
                   key={items.id}
                 >
-                  <a href={`${slug}/research/${items.id}`}>
+                  <Link href={`${slug}/research/${items.id}`}>
                     <div className="relative">
                       <Image
                         src={items.thumbnail || "/placeholder.png"}
@@ -291,7 +292,7 @@ const Page = () => {
                     <div className="pt-3 ml-4 mr-2 mb-3">
                       <h3 className="text-md text-gray-900">{items.title}</h3>
                     </div>
-                  </a>
+                  </Link>
                 </article>
               ))}
             </div>
