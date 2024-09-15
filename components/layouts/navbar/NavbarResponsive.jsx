@@ -46,13 +46,15 @@ const NavbarResponsive = () => {
       <header className="bg-green-600">
         <div className="container mx-auto md:flex items-center justify-center py-4 px-6">
           <div className="md:flex items-center">
-            <Image
-              src="/logo.png"
-              alt="SSTU Logo"
-              className="h-28 mr-4 hidden md:block"
-              width={100}
-              height={100}
-            />
+            <div className="place-items-center grid">
+              <Image
+                src="/logo.png"
+                alt="SSTU Logo"
+                className="md:h-28 mr-4 h-auto"
+                width={100}
+                height={100}
+              />
+            </div>
             <div className="text-center">
               <h1 className="text-white font-bold text-lg md:text-3xl">
                 Sunamgonj Science and Technology University
@@ -61,9 +63,6 @@ const NavbarResponsive = () => {
                 সুনামগঞ্জ বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়
               </h2>
             </div>
-          </div>
-          <div className="md:hidden place-items-center grid">
-            <Image src="/logo.png" alt="SSTU Logo" width={100} height={100} />
           </div>
         </div>
       </header>
