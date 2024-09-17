@@ -56,7 +56,7 @@ const NavbarResponsive = () => {
               />
             </div>
             <div className="text-center">
-              <h1 className="text-white font-bold text-lg md:text-3xl">
+              <h1 className="text-white font-bold text-sm md:text-3xl">
                 Sunamgonj Science and Technology University
               </h1>
               <h2 className="text-white text-lg md:text-3xl">

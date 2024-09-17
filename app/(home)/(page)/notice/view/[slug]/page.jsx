@@ -39,12 +39,12 @@ const Page = () => {
   return (
     <PageLayout title="Notice" style={true} bg="/notice_bg.png">
       <div className="container mx-auto min-h-screen">
-        <div className="flex flex-col justify-center mt-6">
+        <div className="flex flex-col justify-center mt-6 p-2 md:p-0">
           <h3 className="text-2xl font-bold">{noticeData.title}</h3>
           <p className="text-gray-500 mt-2 text-sm">
             {changeDateFormat(noticeData.created_at)}
           </p>
-          <p className="text-gray-500 mt-2">{noticeData.content}</p>
+          <p className="text-gray-500 mt-2 break-words">{noticeData.content}</p>
           {noticeData.pdf && <ShowPDF pdfUrl={noticeData.pdf} />}
         </div>
       </div>

@@ -204,7 +204,7 @@ const Footer = () => {
               width={100}
               height={44}
             />
-            <p className="text-white text-center font-bold md:text-xl uppercase">
+            <p className="text-white text-center font-bold text-sm md:text-xl uppercase">
               Sunamganj Science & Technology University
             </p>
           </div>

@@ -24,7 +24,7 @@ const ChairmanMsg = ({ showfull, path }) => {
 
   return (
     <div
-      className="h-screen sm:max-h-[700px] flex items-center bg-cover bg-center"
+      className="h-screen sm:max-h-[700px] flex items-center bg-cover bg-center mt-24 md:mt-0"
       style={{
         backgroundImage: "url('dept/msgbg2.png')",
       }}
