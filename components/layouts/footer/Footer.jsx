@@ -104,7 +104,7 @@ const Footer = () => {
                 <ul key={idx} className=" text-gray-200">
                   <li>
                     <Link
-                      href={el.href}
+                      href={el.href || el.link}
                       className="hover:text-green-400 duration-150"
                     >
                       {el.name}
@@ -120,7 +120,7 @@ const Footer = () => {
                 <ul key={idx} className=" text-gray-200">
                   <li>
                     <Link
-                      href={el.href}
+                      href={el.href || el.link}
                       className="hover:text-green-400 duration-150"
                     >
                       {el.name}
@@ -136,7 +136,7 @@ const Footer = () => {
                 <ul key={idx} className=" text-gray-200">
                   <li>
                     <Link
-                      href={el.href}
+                      href={el.href || el.link}
                       className="hover:text-green-400 duration-150"
                     >
                       {el.name}
@@ -152,7 +152,7 @@ const Footer = () => {
                 <ul key={idx} className=" text-gray-200">
                   <li>
                     <Link
-                      href={el.href}
+                      href={el.href || el.link}
                       className="hover:text-green-400 duration-150"
                     >
                       {el.name}
@@ -168,7 +168,7 @@ const Footer = () => {
                 <ul key={idx} className=" text-gray-200">
                   <li>
                     <Link
-                      href={el.href}
+                      href={el.href || el.link}
                       className="hover:text-green-400 duration-150"
                     >
                       {el.name}
@@ -185,7 +185,7 @@ const Footer = () => {
                 <ul key={idx} className=" text-gray-200">
                   <li>
                     <Link
-                      href={el.href}
+                      href={el.href || el.link}
                       className="hover:text-green-400 duration-150"
                     >
                       {el.name}
@@ -216,7 +216,7 @@ const Footer = () => {
                 {footerData.webServices.map((el, idx) => (
                   <li key={idx}>
                     <Link
-                      href={el.href}
+                      href={el.href || el.link}
                       className="hover:text-green-400 duration-150"
                     >
                       {el.name}
@@ -230,7 +230,7 @@ const Footer = () => {
                 {footerData.campusLife.map((el, idx) => (
                   <li key={idx}>
                     <Link
-                      href={el.href}
+                      href={el.href || el.link}
                       className="hover:text-green-400 duration-150 cursor-pointer"
                     >
                       {el.name}

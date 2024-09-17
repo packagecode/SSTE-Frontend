@@ -6,6 +6,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'api.sstu.ac.bd',
+      },
+      {
+        protocol: 'https',
         hostname: 'sstu.ac.bd',
       },
       {
