@@ -140,9 +140,9 @@ const Sidebar = () => {
         {generateLink(`/${deptName}/faculty/people`, "Faculty", <FiUsers />)}
         {generateLink(`/${deptName}/contact`, "Contact", <FiMessageSquare />)}
         {/* {generateLink("/", "University Website", <FiArrowLeft />)} */}
-        <a href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <FiArrowLeft className="" /> Back to Home
-        </a>
+        </Link>
       </div>
     </div>
   );

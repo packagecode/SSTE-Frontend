@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -11,7 +12,8 @@ const Navbar = () => {
             src="/logo.png"
             alt="logo"
             className="h-20 md:h-24 pr-0 md:pr-20 w-auto"
-            width={100} height={100}
+            width={100}
+            height={100}
           />
         </div>
         <div className="flex flex-col gap-y-1 text-center md:text-left mt-4 md:mt-0">
@@ -23,30 +25,30 @@ const Navbar = () => {
         </div>
         {/* links */}
         <div className="ml-auto flex gap-x-4 mt-4 md:mt-0">
-          <a
+          <Link
             href="/"
             className="text-green-500 max-w-fit px-2 py-1 font-bold rounded-md"
           >
             Main Website
-          </a>
-          <a
+          </Link>
+          <Link
             href="/career"
             className="bg-green-500 max-w-fit px-2 py-1 text-white rounded-md"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/career/guidelines"
             className="bg-green-500 max-w-fit px-2 py-1 text-white rounded-md"
           >
             Application Guidelines
-          </a>
-          <a
+          </Link>
+          <Link
             href="/career/resources"
             className="bg-green-500 max-w-fit px-2 py-1 text-white rounded-md"
           >
             Resources
-          </a>
+          </Link>
         </div>
       </div>
     </>
