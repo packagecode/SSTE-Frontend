@@ -45,8 +45,8 @@ const Page = () => {
     fetchResearches();
   }, []);
 
-  console.log(teacher);
-  console.log(researches);
+  // console.log(teacher);
+  // console.log(researches);
 
   const workExperience = teacher.work_experience || [];
   const education = teacher.education || [];
@@ -262,7 +262,7 @@ const Page = () => {
                   className=" bg-white shadow-lg border rounded-md duration-300 hover:shadow-sm"
                   key={items.id}
                 >
-                  <Link href={`${slug}/research/${items.id}`}>
+                  <Link href={`/research-extension/view/${items.id}`}>
                     <div className="relative">
                       <Image
                         src={items.thumbnail || "/placeholder.png"}
